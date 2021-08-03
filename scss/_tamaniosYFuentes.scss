@@ -82,6 +82,14 @@ p {
 	text-align: left;
 }
 
+.footer__redes {
+	font-family: $fuenteA;
+	font-size: $t3 - 1;
+	font-weight: $thin;
+	color: $blanco;
+	text-align: center;
+}
+
 // discografía
 
 .disco__cancionTitulo--tyf {
@@ -133,11 +141,29 @@ p {
 	text-align: center;
 }
 
-.footer__redes {
+// biografía
+
+.biografia__parrafo--tyf {
 	font-family: $fuenteA;
-	font-size: $t3 - 1;
-	font-weight: $thin;
+	font-size: $t4 + 1;
+	font-weight: $light;
 	color: $blanco;
-	text-align: center;
+	text-align: left;
+}
+
+.biografia__subtitulo--tyf {
+	font-family: $fuenteA;
+	font-size: $t3;
+	font-weight: $regular;
+	color: $celeste;
+	text-align: left;
+}
+
+.biografia__sectionSubtitulo--tyf {
+	font-family: $fuenteA;
+	font-size: $t3 + 1;
+	font-weight: $medium;
+	color: $celeste;
+	text-align: left;
 }
 

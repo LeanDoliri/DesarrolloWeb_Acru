@@ -7266,6 +7266,13 @@ p {
   color: white;
   text-align: left; }
 
+.footer__redes {
+  font-family: Lexend;
+  font-size: 2rem;
+  font-weight: 100;
+  color: white;
+  text-align: center; }
+
 .disco__cancionTitulo--tyf {
   list-style-type: none;
   font-family: Lexend;
@@ -7309,12 +7316,26 @@ p {
   color: white;
   text-align: center; }
 
-.footer__redes {
+.biografia__parrafo--tyf {
   font-family: Lexend;
   font-size: 2rem;
-  font-weight: 100;
+  font-weight: 300;
   color: white;
-  text-align: center; }
+  text-align: left; }
+
+.biografia__subtitulo--tyf {
+  font-family: Lexend;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #0099cc;
+  text-align: left; }
+
+.biografia__sectionSubtitulo--tyf {
+  font-family: Lexend;
+  font-size: 4rem;
+  font-weight: 500;
+  color: #0099cc;
+  text-align: left; }
 
 .bB {
   border-bottom: solid 2px #0099cc; }
@@ -7409,6 +7430,13 @@ p {
   color: white;
   text-align: left; }
 
+.footer__redes {
+  font-family: Lexend;
+  font-size: 2rem;
+  font-weight: 100;
+  color: white;
+  text-align: center; }
+
 .disco__cancionTitulo--tyf {
   list-style-type: none;
   font-family: Lexend;
@@ -7452,12 +7480,26 @@ p {
   color: white;
   text-align: center; }
 
-.footer__redes {
+.biografia__parrafo--tyf {
   font-family: Lexend;
   font-size: 2rem;
-  font-weight: 100;
+  font-weight: 300;
   color: white;
-  text-align: center; }
+  text-align: left; }
+
+.biografia__subtitulo--tyf {
+  font-family: Lexend;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #0099cc;
+  text-align: left; }
+
+.biografia__sectionSubtitulo--tyf {
+  font-family: Lexend;
+  font-size: 4rem;
+  font-weight: 500;
+  color: #0099cc;
+  text-align: left; }
 
 .bB {
   border-bottom: solid 2px #0099cc; }

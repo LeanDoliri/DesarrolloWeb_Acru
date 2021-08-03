@@ -1,0 +1,143 @@
+$fuenteA: Lexend;
+$fuenteB: Rock Salt;
+
+$t1: 7rem;
+$t2: 5rem;
+$t3: 3rem;
+$t4: 1rem;
+
+$thin: 100;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semiBold: 600;
+$bold:700;
+$extraBold: 800;
+
+.nav__h1 {
+	font-family: $fuenteB;
+	font-size: $t3;
+	color: $negro;
+}
+
+a {
+	font-family: $fuenteA;
+	font-size: $t3 - 0.5;
+	font-weight: $medium;
+}
+
+h1 {
+	font-family: $fuenteB;
+	font-size: $t2 - 1;
+	color: $celeste;
+	text-align: center;
+}
+
+h3 {
+	font-family: $fuenteA;
+	font-size: $t3;
+	font-weight: $medium;
+	color: $celeste;
+	text-align: left;
+}
+
+li {
+	list-style-type: none;
+	font-family: $fuenteA;
+	font-size: $t3 - 0.5;
+	font-weight: $light;
+	color: $blanco;
+	text-align: left;
+}
+
+p {
+	font-family: $fuenteA;
+	font-size: $t4 + 1;
+	font-weight: $light;
+	color: $blanco;
+	text-align: center;
+}
+
+.carousel__titulo {
+	font-family: $fuenteA;
+	font-size: $t3;
+	font-weight: $medium;
+	color: $blanco;
+	text-align: center;
+}
+
+.carousel__subtitulo {
+	font-family: $fuenteA;
+	font-size: $t3 - 1;
+	font-weight: $light;
+	color: $blanco;
+	text-align: center;
+}
+
+.contenido__txt {
+	font-family: $fuenteA;
+	font-size: $t4 + 1;
+	font-weight: $light;
+	color: $blanco;
+	text-align: left;
+}
+
+// discografía
+
+.disco__cancionTitulo--tyf {
+	list-style-type: none;
+	font-family: $fuenteA;
+	font-size: $t3 - 0.5;
+	font-weight: $light;
+	color: $blanco;
+	text-align: left;
+}
+
+.disco__letra--close {
+	float: right;
+	font-size: $t3;
+	font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: none;
+}
+
+.disco__descripcion-tyf {
+	font-family: $fuenteA;
+	font-size: $t4 + 0.5;
+	font-weight: $thin;
+	color: $blanco;
+	text-align: center;
+}
+
+.disco__letra--tyf {
+	font-family: $fuenteA;
+	font-size: $t4 + 1;
+	font-weight: $light;
+	color: $blanco;
+	text-align: left;
+}
+
+.disco__tituloLetra--tyf {
+	font-family: $fuenteB;
+	font-size: $t3;
+	color: $negro;
+	text-align: left;
+}
+
+.disco__letraBoton--tyf {
+	font-family: $fuenteA;
+	font-size: $t4 + 0.5;
+	font-weight: $thin;
+	color: $blanco;
+	text-align: center;
+}
+
+.footer__redes {
+	font-family: $fuenteA;
+	font-size: $t3 - 1;
+	font-weight: $thin;
+	color: $blanco;
+	text-align: center;
+}
+

@@ -1,0 +1,17 @@
+@import "colores";
+
+html {font-size: 62.5%;}
+
+body {
+  background-image: url("../assets/images/FONDO.JPG"); 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+.sombraTxt {text-shadow: 1px 1px 10px black;}
+.sombraCont {box-shadow: 1px 1px 10px black;}
+
+.nav--sticky {position: sticky !important; top: 0px !important; z-index: 999;}
+

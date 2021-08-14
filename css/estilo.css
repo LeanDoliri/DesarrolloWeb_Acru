@@ -7337,6 +7337,20 @@ p {
   color: #0099cc;
   text-align: left; }
 
+.formulario__label--tyf {
+  font-family: Lexend;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #0099cc;
+  text-align: left; }
+
+.formulario__input--tyf {
+  font-family: Lexend;
+  font-size: 2rem;
+  font-weight: 300;
+  color: black;
+  text-align: left; }
+
 .bB {
   border-bottom: solid 2px #0099cc; }
 
@@ -7499,6 +7513,20 @@ p {
   font-size: 4rem;
   font-weight: 500;
   color: #0099cc;
+  text-align: left; }
+
+.formulario__label--tyf {
+  font-family: Lexend;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #0099cc;
+  text-align: left; }
+
+.formulario__input--tyf {
+  font-family: Lexend;
+  font-size: 2rem;
+  font-weight: 300;
+  color: black;
   text-align: left; }
 
 .bB {

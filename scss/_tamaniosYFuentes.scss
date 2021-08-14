@@ -167,3 +167,20 @@ p {
 	text-align: left;
 }
 
+// contacto
+
+.formulario__label--tyf {
+	font-family: $fuenteA;
+	font-size: $t3;
+	font-weight: $regular;
+	color: $celeste;
+	text-align: left;
+}
+
+.formulario__input--tyf {
+	font-family: $fuenteA;
+	font-size: $t4 + 1;
+	font-weight: $light;
+	color: $negro;
+	text-align: left;
+}

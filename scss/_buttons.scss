@@ -3,27 +3,40 @@
 //
 // Base styles
 //
+$celeste: #0099cc;
+$magenta: #660033;
+$negro: black;
+$blanco: white;
+
+$fuenteA: Lexend;
+$fuenteB: Rock Salt;
+
+$t1: 7rem;
+$t2: 5rem;
+$t3: 3rem;
+$t4: 1rem;
+
+$thin: 100;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semiBold: 600;
+$bold:700;
+$extraBold: 800;
 
 .btn {
   display: inline-block;
-  font-family: $btn-font-family;
-  font-weight: $btn-font-weight;
-  color: $body-color;
+  font-family: $fuenteA;
+  font-weight: $regular;
+  color: $blanco;
   text-align: center;
   text-decoration: if($link-decoration == none, null, none);
   white-space: $btn-white-space;
   vertical-align: middle;
   user-select: none;
-  background-color: transparent;
-  border: $btn-border-width solid transparent;
+  background-color: $celeste;
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
-  @include transition($btn-transition);
-
-  @include hover() {
-    color: $body-color;
-    text-decoration: none;
-  }
-
+  
   &:focus,
   &.focus {
     outline: 0;

@@ -15,3 +15,18 @@ body {
 
 .nav--sticky {position: sticky !important; top: 0px !important; z-index: 999;}
 
+.shows__background {
+  background: rgb(10,10,10);
+  background: linear-gradient(0deg, rgba(10,10,10,0.30) 0%, rgba(10,10,10,1) 100%);
+}
+
+.biografia__background {
+  background: rgba(10,10,10,0.75);
+  // background: linear-gradient(0deg, rgba(10,10,10,0.000001) 0%, rgba(10,10,10,1) 100%);
+}
+
+.contacto__background {
+  background: rgb(10,10,10);
+  background: linear-gradient(0deg, rgba(10,10,10,0.30) 0%, rgba(10,10,10,1) 100%);
+}
+

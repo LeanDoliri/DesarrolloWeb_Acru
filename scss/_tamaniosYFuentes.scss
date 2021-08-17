@@ -188,3 +188,32 @@ p {
 .formulario__btn--tyf {
 	font-size: $t4 + 1;
 }
+
+// shows
+
+.shows__titulo--tyf {
+	font-family: $fuenteA;
+	font-size: $t3;
+	font-weight: $medium;
+	color: $celeste;
+	text-align: center;
+}
+
+.shows__entradas--tyf {
+	font-family: $fuenteA;
+	font-size: $t4 + 0.5;
+	font-weight: $regular;
+	color: $blanco;
+	text-align: center;
+	background-color: $celeste;
+}
+
+.shows__entradas--tyf:hover {
+	font-family: $fuenteA;
+	font-size: $t4 + 0.5;
+	font-weight: $regular;
+	color: $blanco;
+	text-align: center;
+	background-color: $celeste;
+	text-decoration: none;
+}

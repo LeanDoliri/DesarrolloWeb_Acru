@@ -7200,6 +7200,17 @@ body {
   top: 0px !important;
   z-index: 999; }
 
+.shows__background {
+  background: #0a0a0a;
+  background: linear-gradient(0deg, rgba(10, 10, 10, 0.3) 0%, #0a0a0a 100%); }
+
+.biografia__background {
+  background: rgba(10, 10, 10, 0.75); }
+
+.contacto__background {
+  background: #0a0a0a;
+  background: linear-gradient(0deg, rgba(10, 10, 10, 0.3) 0%, #0a0a0a 100%); }
+
 .nav__h1 {
   font-family: Rock Salt;
   font-size: 3rem;
@@ -7346,6 +7357,30 @@ p {
 
 .formulario__btn--tyf {
   font-size: 2rem; }
+
+.shows__titulo--tyf {
+  font-family: Lexend;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #0099cc;
+  text-align: center; }
+
+.shows__entradas--tyf {
+  font-family: Lexend;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  background-color: #0099cc; }
+
+.shows__entradas--tyf:hover {
+  font-family: Lexend;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  background-color: #0099cc;
+  text-decoration: none; }
 
 .bB {
   border-bottom: solid 2px #0099cc; }
@@ -7528,6 +7563,30 @@ p {
 .formulario__btn--tyf {
   font-size: 2rem; }
 
+.shows__titulo--tyf {
+  font-family: Lexend;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #0099cc;
+  text-align: center; }
+
+.shows__entradas--tyf {
+  font-family: Lexend;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  background-color: #0099cc; }
+
+.shows__entradas--tyf:hover {
+  font-family: Lexend;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  background-color: #0099cc;
+  text-decoration: none; }
+
 .bB {
   border-bottom: solid 2px #0099cc; }
 
@@ -7583,4 +7642,7 @@ footer {
   transform: translate(0px, -3px); }
 
 .img--animacion:hover {
+  transform: scale(1.03, 1.03); }
+
+.shows__entradas--animacion:hover {
   transform: scale(1.03, 1.03); }

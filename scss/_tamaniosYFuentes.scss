@@ -92,6 +92,14 @@ p {
 
 // discografía
 
+.disco__discoTitulo--tyf {
+	font-family: $fuenteA;
+	font-size: $t3;
+	font-weight: $medium;
+	color: $celeste;
+	text-align: center;
+}
+
 .disco__cancionTitulo--tyf {
 	list-style-type: none;
 	font-family: $fuenteA;

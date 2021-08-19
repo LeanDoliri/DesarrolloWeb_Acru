@@ -7211,6 +7211,10 @@ body {
   background: #0a0a0a;
   background: linear-gradient(0deg, rgba(10, 10, 10, 0.3) 0%, #0a0a0a 100%); }
 
+.discografia__background {
+  background: #0a0a0a;
+  background: linear-gradient(0deg, rgba(10, 10, 10, 0.3) 0%, #0a0a0a 100%); }
+
 .nav__h1 {
   font-family: Rock Salt;
   font-size: 3rem;
@@ -7275,6 +7279,13 @@ p {
   font-size: 2rem;
   font-weight: 100;
   color: white;
+  text-align: center; }
+
+.disco__discoTitulo--tyf {
+  font-family: Lexend;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #0099cc;
   text-align: center; }
 
 .disco__cancionTitulo--tyf {
@@ -7395,12 +7406,10 @@ p {
   border: solid 2px #660033; }
 
 .disco__letra--bm {
-  background-color: black;
-  width: 150% !important; }
+  background-color: black; }
 
 .disco__tituloLetra--bm {
-  background-color: #0099cc;
-  width: 150% !important; }
+  background-color: #0099cc; }
 
 .disco__letraBoton--bm {
   background-color: #0099cc;
@@ -7482,6 +7491,13 @@ p {
   color: white;
   text-align: center; }
 
+.disco__discoTitulo--tyf {
+  font-family: Lexend;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #0099cc;
+  text-align: center; }
+
 .disco__cancionTitulo--tyf {
   list-style-type: none;
   font-family: Lexend;
@@ -7600,12 +7616,10 @@ p {
   border: solid 2px #660033; }
 
 .disco__letra--bm {
-  background-color: black;
-  width: 150% !important; }
+  background-color: black; }
 
 .disco__tituloLetra--bm {
-  background-color: #0099cc;
-  width: 150% !important; }
+  background-color: #0099cc; }
 
 .disco__letraBoton--bm {
   background-color: #0099cc;
@@ -7616,21 +7630,6 @@ nav {
 
 footer {
   background-color: black; }
-
-.disco--grid {
-  display: grid;
-  grid-template-areas: "image content" "descripcion content";
-  grid-template-rows: 300px auto;
-  grid-template-columns: 25% 75%; }
-
-.disco__img--grid {
-  grid-area: image; }
-
-.dico__lista--grid {
-  grid-area: content; }
-
-.disco__descripcion--grid {
-  grid-area: descripcion; }
 
 .nav__pages--animacion:hover {
   transform: scale(1.03, 1.03); }

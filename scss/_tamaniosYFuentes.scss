@@ -14,6 +14,10 @@ $semiBold: 600;
 $bold:700;
 $extraBold: 800;
 
+.td-none:hover {
+	text-decoration: none;
+}
+
 .nav__h1 {
 	font-family: $fuenteB;
 	font-size: $t3;
@@ -88,6 +92,25 @@ p {
 	font-weight: $thin;
 	color: $blanco;
 	text-align: center;
+}
+
+// index
+
+.novedades__titulo--tyf {
+	font-family: $fuenteA;
+	font-size: $t3;
+	font-weight: $light;
+	color: $celeste;
+	text-align: left;	
+}
+
+.novedades__p--tyf {
+	font-family: $fuenteA;
+	font-size: $t4 + 1;
+	font-weight: $light;
+	color: $blanco;
+	text-align: left;
+	text-decoration: none;
 }
 
 // discografía

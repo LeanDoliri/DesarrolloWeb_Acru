@@ -7200,6 +7200,10 @@ body {
   top: 0px !important;
   z-index: 999; }
 
+.index__background {
+  background: #0a0a0a;
+  background: linear-gradient(0deg, rgba(10, 10, 10, 0.3) 0%, #0a0a0a 100%); }
+
 .shows__background {
   background: #0a0a0a;
   background: linear-gradient(0deg, rgba(10, 10, 10, 0.3) 0%, #0a0a0a 100%); }
@@ -7214,6 +7218,13 @@ body {
 .discografia__background {
   background: #0a0a0a;
   background: linear-gradient(0deg, rgba(10, 10, 10, 0.3) 0%, #0a0a0a 100%); }
+
+@media only screen and (max-width: 767px) {
+  .hidden-mobile {
+    visibility: hidden; } }
+
+.td-none:hover {
+  text-decoration: none; }
 
 .nav__h1 {
   font-family: Rock Salt;
@@ -7280,6 +7291,21 @@ p {
   font-weight: 100;
   color: white;
   text-align: center; }
+
+.novedades__titulo--tyf {
+  font-family: Lexend;
+  font-size: 3rem;
+  font-weight: 300;
+  color: #0099cc;
+  text-align: left; }
+
+.novedades__p--tyf {
+  font-family: Lexend;
+  font-size: 2rem;
+  font-weight: 300;
+  color: white;
+  text-align: left;
+  text-decoration: none; }
 
 .disco__discoTitulo--tyf {
   font-family: Lexend;
@@ -7425,6 +7451,9 @@ p {
   justify-content: space-between;
   align-items: center; }
 
+.td-none:hover {
+  text-decoration: none; }
+
 .nav__h1 {
   font-family: Rock Salt;
   font-size: 3rem;
@@ -7490,6 +7519,21 @@ p {
   font-weight: 100;
   color: white;
   text-align: center; }
+
+.novedades__titulo--tyf {
+  font-family: Lexend;
+  font-size: 3rem;
+  font-weight: 300;
+  color: #0099cc;
+  text-align: left; }
+
+.novedades__p--tyf {
+  font-family: Lexend;
+  font-size: 2rem;
+  font-weight: 300;
+  color: white;
+  text-align: left;
+  text-decoration: none; }
 
 .disco__discoTitulo--tyf {
   font-family: Lexend;
@@ -7645,3 +7689,7 @@ footer {
 
 .shows__entradas--animacion:hover {
   transform: scale(1.03, 1.03); }
+
+.contenido__desplazamiento:hover {
+  transition: 1s;
+  transform: translate(25px, 0); }

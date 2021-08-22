@@ -15,6 +15,11 @@ body {
 
 .nav--sticky {position: sticky !important; top: 0px !important; z-index: 999;}
 
+.index__background {
+  background: rgb(10,10,10);
+  background: linear-gradient(0deg, rgba(10,10,10,0.30) 0%, rgba(10,10,10,1) 100%);
+}
+
 .shows__background {
   background: rgb(10,10,10);
   background: linear-gradient(0deg, rgba(10,10,10,0.30) 0%, rgba(10,10,10,1) 100%);
@@ -34,5 +39,9 @@ body {
   background: linear-gradient(0deg, rgba(10,10,10,0.30) 0%, rgba(10,10,10,1) 100%);
 }
 
-
+.hidden-mobile {
+  @media only screen and (max-width:  767px) {
+    visibility:hidden;
+  }  
+}
 

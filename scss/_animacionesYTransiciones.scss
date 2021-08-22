@@ -1,11 +1,9 @@
 .nav__pages--animacion:hover {
 		transform: scale(1.03,1.03);
-
 }
 
 .discos__spotify--animacion:hover {
 		transform: scale(1.03,1.03);
-
 }
 
 .footer__redes--animacion:hover {
@@ -18,4 +16,9 @@
 
 .shows__entradas--animacion:hover {
 		transform: scale(1.03,1.03);
+}
+
+.contenido__desplazamiento:hover {
+	transition: 1s;
+	transform: translate(25px,0);
 }

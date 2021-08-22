@@ -31,8 +31,8 @@
 	}
 
 	.contenido__desplazamiento:hover {
-		transition: 1s;
-		transform: translate(25px,0);
+		transition: 1s !important;
+		transform: translate(25px,0) !important;
 	}
 
 }

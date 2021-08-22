@@ -15,6 +15,10 @@ body {
 
 .nav--sticky {position: sticky !important; top: 0px !important; z-index: 999;}
 
+.footer--background {
+  background-color: $negro;
+}
+
 .index__background {
   background: rgb(10,10,10);
   background: linear-gradient(0deg, rgba(10,10,10,0.30) 0%, rgba(10,10,10,1) 100%);

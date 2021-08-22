@@ -1,24 +1,38 @@
-.nav__pages--animacion:hover {
+@media only screen and (min-width: 1024px) {
+
+	.nav__pages--animacion:hover {
+		transform: scale(1.05,1.05);
+		transition: 0.5s;
+	}
+
+	.discos__spotify--animacion:hover {
+		transform: scale(1.05,1.05);
+		transition: 0.5s;
+	}
+
+	.footer__redes--animacion:hover {
+		transform: translate(0px, -3px);
+		transition: 0.5s;
+	}
+
+	.img--animacion:hover {
 		transform: scale(1.03,1.03);
-}
+		transition: 0.5s;
+	}
 
-.discos__spotify--animacion:hover {
-		transform: scale(1.03,1.03);
-}
+	.shows__entradas--animacion:hover {
+		transform: scale(1.05,1.05);
+		transition: 0.5s;
+	}
 
-.footer__redes--animacion:hover {
-	transform: translate(0px, -3px);
-}
+	.contacto__botones--animacion:hover{
+		transform: scale(1.05,1.05);
+		transition: 0.5s;
+	}
 
-.img--animacion:hover {
-		transform: scale(1.03,1.03);
-}
+	.contenido__desplazamiento:hover {
+		transition: 1s;
+		transform: translate(25px,0);
+	}
 
-.shows__entradas--animacion:hover {
-		transform: scale(1.03,1.03);
-}
-
-.contenido__desplazamiento:hover {
-	transition: 1s;
-	transform: translate(25px,0);
 }

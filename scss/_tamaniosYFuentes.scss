@@ -14,6 +14,10 @@ $semiBold: 600;
 $bold:700;
 $extraBold: 800;
 
+strong {
+	font-weight: $extraBold;
+}
+
 .td-none:hover {
 	text-decoration: none;
 }
@@ -90,6 +94,14 @@ p {
 	font-family: $fuenteA;
 	font-size: $t3 - 1;
 	font-weight: $thin;
+	color: $blanco;
+	text-align: center;
+}
+
+.footer__copy--tyf {
+	font-family: $fuenteA;
+	font-size: $t4;
+	font-weight: $light;
 	color: $blanco;
 	text-align: center;
 }

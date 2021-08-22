@@ -7180,8 +7180,7 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 html {
-  font-size: 62.5%;
-  overflow: scroll; }
+  font-size: 62.5%; }
 
 body {
   background-image: url("../assets/images/FONDO.jpg");

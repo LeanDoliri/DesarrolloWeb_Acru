@@ -7730,5 +7730,5 @@ footer {
     transform: scale(1.05, 1.05);
     transition: 0.5s; }
   .contenido__desplazamiento:hover {
-    transition: 1s;
+    transition: all 1s;
     transform: translate(25px, 0); } }

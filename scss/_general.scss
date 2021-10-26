@@ -7,7 +7,7 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;  
 }
 
 .sombraTxt {text-shadow: 1px 1px 10px black;}
@@ -31,6 +31,19 @@ body {
 
 .biografia__background {
   background: rgba(10,10,10,0.75);
+}
+
+.e-shop__carrito--background {
+  background: rgba(255,255,255, 0.75);
+}
+
+.e-shop__background {
+  background: rgb(10,10,10);
+  background: linear-gradient(0deg, rgba(10,10,10,0.30) 0%, rgba(10,10,10,1) 100%);
+}
+
+.e-shop__card--background {
+  background: rgba(255,255,255, 0.25);
 }
 
 .contacto__background {

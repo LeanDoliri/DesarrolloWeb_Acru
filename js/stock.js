@@ -1,0 +1,12 @@
+// productos.push(new Producto(1, 'remera A', talle[0], 1200, 1, 'assets/imgs/tshirt_man.jpg'));
+// productos.push(new Producto(2, 'remera B', talle[1], 1200, 1, 'assets/imgs/tshirt_man.jpg'));
+// productos.push(new Producto(3, 'remera C', talle[2], 1200, 1, 'assets/imgs/tshirt_man.jpg'));
+// productos.push(new Producto(4, 'remera D', talle[3], 1200, 1, 'assets/imgs/tshirt_man.jpg'));
+// productos.push(new Producto(5, 'buzo A', talle[0], 1500, 1, 'assets/imgs/tshirt_man.jpg'));
+// productos.push(new Producto(6, 'buzo B', talle[1], 1500, 1, 'assets/imgs/tshirt_man.jpg'));
+// productos.push(new Producto(7, 'buzo C', talle[2], 1500, 1, 'assets/imgs/tshirt_man.jpg'));
+// productos.push(new Producto(8, 'buzo D', talle[3], 1500, 1, 'assets/imgs/tshirt_man.jpg'));
+// productos.push(new Producto(9, 'pantalón A', talle[0], 1300, 1, 'assets/imgs/tshirt_man.jpg'));
+// productos.push(new Producto(10,'pantalón B', talle[1], 1300, 1, 'assets/imgs/tshirt_man.jpg'));
+// productos.push(new Producto(11,'pantalón C', talle[2], 1300, 1, 'assets/imgs/tshirt_man.jpg'));
+// productos.push(new Producto(12,'pantalón D', talle[3], 1300, 1, 'assets/imgs/tshirt_man.jpg'));

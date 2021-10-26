@@ -20,6 +20,16 @@
 		transition: 0.5s;
 	}
 
+	.e-shop__card--animacion:hover {
+		transform: scale(1.03,1.03);
+		transition: 0.5s;
+	}
+
+	.e-shop__comprar--animacion:hover {
+		transform: scale(1.05,1.05);
+		transition: 0.5s;
+	}
+
 	.shows__entradas--animacion:hover {
 		transform: scale(1.05,1.05);
 		transition: 0.5s;

@@ -7214,6 +7214,16 @@ body {
 .biografia__background {
   background: rgba(10, 10, 10, 0.75); }
 
+.e-shop__carrito--background {
+  background: rgba(255, 255, 255, 0.75); }
+
+.e-shop__background {
+  background: #0a0a0a;
+  background: linear-gradient(0deg, rgba(10, 10, 10, 0.3) 0%, #0a0a0a 100%); }
+
+.e-shop__card--background {
+  background: rgba(255, 255, 255, 0.25); }
+
 .contacto__background {
   background: #0a0a0a;
   background: linear-gradient(0deg, rgba(10, 10, 10, 0.3) 0%, #0a0a0a 100%); }
@@ -7320,6 +7330,79 @@ p {
   text-align: left;
   text-decoration: none; }
 
+.e-shop__cardTitle--tyf {
+  font-family: Lexend;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #0099cc;
+  text-align: left; }
+
+.e-shop__cardP--tyf {
+  font-family: Lexend;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: white;
+  text-align: left; }
+
+.e-shop__cardP--btn {
+  font-family: Lexend;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  background-color: #0099cc; }
+
+.e-shop__cardP--btn:hover {
+  font-family: Lexend;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  background-color: #0099cc;
+  text-decoration: none; }
+
+.e-shop__productoCarrito--tyf {
+  font-family: Lexend;
+  font-size: 2rem;
+  font-weight: 400;
+  color: black;
+  text-align: left; }
+
+.e-shop__spanCarrito--tyf {
+  font-family: Lexend;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: black;
+  text-align: center; }
+
+.e-shop__productoCarrito--tyf {
+  font-family: Lexend;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: black;
+  text-align: center; }
+
+.e-shop__totalCarrito--tyf {
+  font-family: Lexend;
+  font-size: 3rem;
+  font-weight: 500;
+  color: black;
+  text-align: center; }
+
+.e-shop__comprarCarrito--tyf {
+  font-family: Lexend;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+  text-align: center; }
+
+.e-shop__comprarCarrito--tyf:hover {
+  font-family: Lexend;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+  text-align: center; }
+
 .disco__discoTitulo--tyf {
   font-family: Lexend;
   font-size: 3rem;
@@ -7459,6 +7542,9 @@ p {
 .disco__letraBoton--bm {
   background-color: #0099cc;
   border: none; }
+
+.e-shop__card--border {
+  border: solid 2px #660033; }
 
 .contenido__imgTxt--flex {
   display: flex;
@@ -7564,6 +7650,79 @@ p {
   text-align: left;
   text-decoration: none; }
 
+.e-shop__cardTitle--tyf {
+  font-family: Lexend;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #0099cc;
+  text-align: left; }
+
+.e-shop__cardP--tyf {
+  font-family: Lexend;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: white;
+  text-align: left; }
+
+.e-shop__cardP--btn {
+  font-family: Lexend;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  background-color: #0099cc; }
+
+.e-shop__cardP--btn:hover {
+  font-family: Lexend;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  background-color: #0099cc;
+  text-decoration: none; }
+
+.e-shop__productoCarrito--tyf {
+  font-family: Lexend;
+  font-size: 2rem;
+  font-weight: 400;
+  color: black;
+  text-align: left; }
+
+.e-shop__spanCarrito--tyf {
+  font-family: Lexend;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: black;
+  text-align: center; }
+
+.e-shop__productoCarrito--tyf {
+  font-family: Lexend;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: black;
+  text-align: center; }
+
+.e-shop__totalCarrito--tyf {
+  font-family: Lexend;
+  font-size: 3rem;
+  font-weight: 500;
+  color: black;
+  text-align: center; }
+
+.e-shop__comprarCarrito--tyf {
+  font-family: Lexend;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+  text-align: center; }
+
+.e-shop__comprarCarrito--tyf:hover {
+  font-family: Lexend;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+  text-align: center; }
+
 .disco__discoTitulo--tyf {
   font-family: Lexend;
   font-size: 3rem;
@@ -7704,6 +7863,9 @@ p {
   background-color: #0099cc;
   border: none; }
 
+.e-shop__card--border {
+  border: solid 2px #660033; }
+
 nav {
   background-color: #660033; }
 
@@ -7722,6 +7884,12 @@ footer {
     transition: 0.5s; }
   .img--animacion:hover {
     transform: scale(1.03, 1.03);
+    transition: 0.5s; }
+  .e-shop__card--animacion:hover {
+    transform: scale(1.03, 1.03);
+    transition: 0.5s; }
+  .e-shop__comprar--animacion:hover {
+    transform: scale(1.05, 1.05);
     transition: 0.5s; }
   .shows__entradas--animacion:hover {
     transform: scale(1.05, 1.05);

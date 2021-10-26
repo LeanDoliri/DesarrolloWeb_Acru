@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "nombre": "REMERA A",
+    "talle": "S",
+    "precio": 1200,
+    "cantidad": 1,
+    "img": "assets/imgs/tshirt_man.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "REMERA B",
+    "talle": "M",
+    "precio": 1200,
+    "cantidad": 1,
+    "img": "assets/imgs/tshirt_man.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "REMERA C",
+    "talle": "L",
+    "precio": 1200,
+    "cantidad": 1,
+    "img": "assets/imgs/tshirt_man.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "REMERA D",
+    "talle": "XL",
+    "precio": 1200,
+    "cantidad": 1,
+    "img": "assets/imgs/tshirt_man.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "BUZO A",
+    "talle": "S",
+    "precio": 1500,
+    "cantidad": 1,
+    "img": "assets/imgs/tshirt_man.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "BUZO B",
+    "talle": "M",
+    "precio": 1500,
+    "cantidad": 1,
+    "img": "assets/imgs/tshirt_man.jpg"
+  },
+  {
+    "id": 7,
+    "nombre": "BUZO C",
+    "talle": "L",
+    "precio": 1500,
+    "cantidad": 1,
+    "img": "assets/imgs/tshirt_man.jpg"
+  },
+  {
+    "id": 8,
+    "nombre": "BUZO D",
+    "talle": "XL",
+    "precio": 1500,
+    "cantidad": 1,
+    "img": "assets/imgs/tshirt_man.jpg"
+  },
+  {
+    "id": 9,
+    "nombre": "PANTALÓN A",
+    "talle": "S",
+    "precio": 1300,
+    "cantidad": 1,
+    "img": "assets/imgs/tshirt_man.jpg"
+  },
+  {
+    "id": 10,
+    "nombre": "PANTALÓN B",
+    "talle": "M",
+    "precio": 1300,
+    "cantidad": 1,
+    "img": "assets/imgs/tshirt_man.jpg"
+  },
+  {
+    "id": 11,
+    "nombre": "PANTALÓN C",
+    "talle": "L",
+    "precio": 1300,
+    "cantidad": 1,
+    "img": "assets/imgs/tshirt_man.jpg"
+  },
+  {
+    "id": 12,
+    "nombre": "PANTALÓN D",
+    "talle": "XL",
+    "precio": 1300,
+    "cantidad": 1,
+    "img": "assets/imgs/tshirt_man.jpg"
+  }
+]

@@ -7,7 +7,7 @@
 	<meta name="description" content="Sitio Oficial de Acru - Shows">
 	<link rel="icon" type="image/png" href="../assets/logos e iconos/LOGO2.png">
 
-	<title>ACRU - Shows</title>
+	<title>ACRU - E-Shop</title>
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -44,12 +44,54 @@
 				  </button>
 				  <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
 				    <div class="navbar-nav">
-				      <a class="active nav-link p-4 nav__pages--animacion" href="shows.html">Shows</a>
-				      <a class="nav-link p-4 nav__pages--animacion" href="e-shop.html">E-Shop</a>		      
-				      <a class="nav-link p-4 nav__pages--animacion" href="discografia.html">Discografía</a>
-				      <a class="nav-link p-4 nav__pages--animacion" href="biografia.html">Biografía</a>
-				      <a class="nav-link p-4 nav__pages--animacion" href="contacto.html">Contacto</a>
-				      <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
+					    <a class="nav-link p-4 nav__pages--animacion" href="shows.html">Shows</a>
+					    <a class="active nav-link p-4 nav__pages--animacion" href="e-shop.html">E-Shop</a>
+					    <a class="nav-link p-4 nav__pages--animacion" href="discografia.html">Discografía</a>
+					    <a class="nav-link p-4 nav__pages--animacion" href="biografia.html">Biografía</a>
+					    <a class="nav-link p-4 nav__pages--animacion" href="contacto.html">Contacto</a>
+					    <div class="dropdown p-4 btn-group dropleft">
+							<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<div class="d-inline-flex justify-content-center align-items-center">
+									<img src="../assets/images/carrito-de-compras.png" width="30" class="mr-3 ">
+									<span class="badge badge-light e-shop__spanCarrito--tyf p-2">10</span>
+								</div>	    
+							</button>
+							<div class="dropdown-menu e-shop__carrito--background" aria-labelledby="dropdownMenuButton">
+								<div>
+									<div class="d-flex justify-content-between align-items-center">
+										<div>
+											<p class="m-3 e-shop__productoCarrito--tyf">Remera</p>
+										</div>
+										<div class="d-inline-flex align-items-center">
+											<span class="m-3 p-2 badge btn-warning e-shop__spanCarrito--tyf">Cantidad: 1</span>
+											<span class="m-3 p-2 badge btn-success e-shop__spanCarrito--tyf">$1500</span>
+											<button type="button" class="btn btn-danger m-3">
+												<img src="../assets/images/cesto.png" width="15" alt="">
+											</button>
+										</div>
+										<hr>
+									</div>
+									<div class="d-flex justify-content-between align-items-center">
+										<div>
+											<p class="m-3 e-shop__productoCarrito--tyf">Remera</p>
+										</div>
+										<div class="d-inline-flex align-items-center">
+											<span class="m-3 p-2 badge btn-warning e-shop__spanCarrito--tyf">Cantidad: 1</span>
+											<span class="m-3 p-2 badge btn-success e-shop__spanCarrito--tyf">$1500</span>
+											<button type="button" class="btn btn-danger m-3">
+												<img src="../assets/images/cesto.png" width="15" alt="">
+											</button>
+										</div>
+										<hr>
+									</div>
+								</div>																	
+							    <hr>
+							    <div class="d-flex flex-column justify-content-center align-items-center">
+								    <p class="e-shop__totalCarrito--tyf">Total: $1500</p>
+								    <button type="button" class="btn e-shop__comprarCarrito--tyf e-shop__card--animacion">COMPRAR</button>
+							    </div>
+							</div>
+						</div>						
 				    </div>
 				  </div>
 				</nav>				
@@ -61,7 +103,7 @@
 	<div class="container-fluid nav--border">
 		<div class="row">
 			<div class="col-lg-12 col-xs-12">
-				<img src="../assets/images/RECITAL1.jpg" alt="" class="img-fluid img-crop">
+				<img src="../assets/images/FOTO11.jpg" alt="" class="img-fluid img-crop">
 			</div>
 		</div>
 	</div>
@@ -70,86 +112,32 @@
 	<div class="container mt-5" data-aos="fade-up">
 		<div class="row">
 			<div class="col-lg-12 col-xs-12 p-3">
-				<h1 class="sombraTxt">Shows</h1>
+				<h1 class="sombraTxt">E-Shop</h1>
 				<p class="sombraTxt">			
-				Enterate de todas las fechas que se vienen.
+				El merchandising oficial de Acru.
 				</p>				
 			</div>		
 		</div>		
 	</div>
 
-	<!-- section -->
-	<div class="container mt-5 p-3 shows__background rounded contenido__desplazamiento" data-aos="fade-right">
-		<div class="row d-flex justify-content-center align-items-center">
-			<div class="col-lg-5 col-xs-12">
-				<img src="../assets/shows/acru_salta960.png" class="img-fluid rounded">
-			</div>
-			<div class="col-lg-5 col-xs-12 pt-3">
-				<h3 class="shows__titulo--tyf sombraTxt">SALTA</h3>
-				<p class="sombraTxt">Sábado 18 de Septiembre<br>Teatro Fundación Salta</p>
-			</div>
-			<div class="col-lg-2 col-xs-12 pt-3 d-flex justify-content-center shows__entradas--animacion">
-				<a href="https://www.ticketek.com.ar/acru/teatro-fundacion" target="_blanck" class="p-3 shows__entradas--tyf rounded">ENTRADAS</a>
-			</div>
-		</div>
-	</div>
-	<div class="container mt-5 p-3 shows__background rounded contenido__desplazamiento" data-aos="fade-left">
-		<div class="row d-flex justify-content-center align-items-center">
-			<div class="col-lg-5 col-xs-12">
-				<img src="../assets/shows/acru_gc960.png" class="img-fluid rounded">
-			</div>
-			<div class="col-lg-5 col-xs-12 pt-3">
-				<h3 class="shows__titulo--tyf sombraTxt">MENDOZA</h3>
-				<p class="sombraTxt">Jueves 7 de Octubre<br>Teatro Plaza (Godoy Cruz)</p>
-			</div>
-			<div class="col-lg-2 col-xs-12 pt-3 d-flex justify-content-center">
-				<a href="https://www.ticketek.com.ar/acru/cine-teatro-plaza" target="_blanck" class="p-3 shows__entradas--tyf shows__entradas--animacion rounded">ENTRADAS</a>
+	<div class="container mt-5" data-aos="fade-up">
+		<div class="row">
+			<div class="col-lg-12 col-xs-12 p-3 d-flex justify-content-around flex-wrap e-shop__background rounded">
+				<div class="card m-3 e-shop__card--background e-shop__card--animacion e-shop__card--border sombraCont" style="width: 25rem;">
+					<img src="../assets/images/productos/tshirt_man.jpg" class="card-img-top img-fluid" alt="...">
+					<div class="card-body">
+					    <h5 class="card-title e-shop__cardTitle--tyf sombraTxt">Card title</h5>
+					    <p class="card-text e-shop__cardP--tyf sombraTxt">
+					    	Precio y giladas<br>
+					    	Otras Giladas
+					    </p>
+					    <a href="#" class="btn e-shop__comprar--animacion e-shop__cardP--btn">Comprar</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="container mt-5 p-3 shows__background rounded contenido__desplazamiento" data-aos="fade-right">
-		<div class="row d-flex justify-content-center align-items-center">
-			<div class="col-lg-5 col-xs-12">
-				<img src="../assets/shows/acru_sj960.png" class="img-fluid rounded">
-			</div>
-			<div class="col-lg-5 col-xs-12 pt-3">
-				<h3 class="shows__titulo--tyf sombraTxt">SAN JUAN</h3>
-				<p class="sombraTxt">Viernes 8 de Octubre<br>La Meseta</p>
-			</div>
-			<div class="col-lg-2 col-xs-12 pt-3 d-flex justify-content-center">
-				<a href="https://www.ticketek.com.ar/acru/la-meseta" target="_blanck" class="p-3 shows__entradas--tyf shows__entradas--animacion rounded">ENTRADAS</a>
-			</div>
-		</div>
-	</div>
-	<div class="container mt-5 p-3 shows__background rounded contenido__desplazamiento" data-aos="fade-left">
-		<div class="row d-flex justify-content-center align-items-center">
-			<div class="col-lg-5 col-xs-12">
-				<img src="../assets/shows/acru_sl960.png" class="img-fluid rounded">
-			</div>
-			<div class="col-lg-5 col-xs-12 pt-3">
-				<h3 class="shows__titulo--tyf sombraTxt">SAN LUIS</h3>
-				<p class="sombraTxt">Sábado 9 de Octubre<br>Tinglao</p>
-			</div>
-			<div class="col-lg-2 col-xs-12 pt-3 d-flex justify-content-center">
-				<a href="https://www.ticketek.com.ar/acru/tinglao-bar" target="_blanck" class="p-3 shows__entradas--tyf shows__entradas--animacion rounded">ENTRADAS</a>
-			</div>
-		</div>
-	</div>
-	<div class="container mt-5 mb-5 p-3 shows__background rounded contenido__desplazamiento" data-aos="fade-right">
-		<div class="row d-flex justify-content-center align-items-center">
-			<div class="col-lg-5 col-xs-12">
-				<img src="../assets/shows/acru_sluis960.png" class="img-fluid rounded">
-			</div>
-			<div class="col-lg-5 col-xs-12 pt-3">
-				<h3 class="shows__titulo--tyf sombraTxt">VILLA MERCEDES</h3>
-				<p class="sombraTxt">Domingo 10 de Octubre<br>Auditorio Morrison (San Luis)</p>
-			</div>
-			<div class="col-lg-2 col-xs-12 pt-3 d-flex justify-content-center">
-				<a href="https://www.ticketek.com.ar/acru/auditorio-morrison" target="_blanck" class="p-3 shows__entradas--tyf shows__entradas--animacion rounded">ENTRADAS</a>
-			</div>
-		</div>
-	</div>
-	
+
 	<!-- footer -->
 	<div class="container-fluid footer--background">
 		<div class="row">
@@ -179,7 +167,7 @@
 	</div>
 
 	<!-- Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
 	<!-- AOS JS -->
@@ -187,5 +175,11 @@
 	<script>
   	AOS.init();
 	</script>
+
+	<script src="../js/funciones.js"></script>
+	<script src="../js/globales.js"></script>
+	<script src="../js/producto.js"></script>
+	<script src="../js/stock.js"></script>
+	<script src="../js/main.js"></script>
 </body>
 </html> 

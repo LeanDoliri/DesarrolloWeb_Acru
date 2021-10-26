@@ -125,6 +125,91 @@ p {
 	text-decoration: none;
 }
 
+// E-Shop
+
+.e-shop__cardTitle--tyf {
+	font-family: $fuenteA;
+	font-size: $t3;
+	font-weight: $medium;
+	color: $celeste;
+	text-align: left;
+}
+
+.e-shop__cardP--tyf {
+	font-family: $fuenteA;
+	font-size: $t4 + 0.5;
+	font-weight: $light;
+	color: $blanco;
+	text-align: left;
+}
+
+.e-shop__cardP--btn {
+	font-family: $fuenteA;
+	font-size: $t4 + 0.5;
+	font-weight: $regular;
+	color: $blanco;
+	text-align: center;
+	background-color: $celeste;
+}
+
+.e-shop__cardP--btn:hover {
+	font-family: $fuenteA;
+	font-size: $t4 + 0.5;
+	font-weight: $regular;
+	color: $blanco;
+	text-align: center;
+	background-color: $celeste;
+	text-decoration: none;
+}
+
+.e-shop__productoCarrito--tyf {
+	font-family: $fuenteA;
+	font-size: $t4 + 1;
+	font-weight: $regular;
+	color: $negro;
+	text-align: left;
+}
+
+.e-shop__spanCarrito--tyf {
+	font-family: $fuenteA;
+	font-size: $t4 + 0.25;
+	font-weight: $light;
+	color: $negro;
+	text-align: center;
+}
+
+.e-shop__productoCarrito--tyf {
+	font-family: $fuenteA;
+	font-size: $t4 + 1.50;
+	font-weight: $medium;
+	color: $negro;
+	text-align: center;
+}
+
+.e-shop__totalCarrito--tyf {
+	font-family: $fuenteA;
+	font-size: $t3;
+	font-weight: $medium;
+	color: $negro;
+	text-align: center;
+}
+
+.e-shop__comprarCarrito--tyf {
+	font-family: $fuenteA;
+	font-size: $t4 + 0.5;
+	font-weight: $regular;
+	color: $white;
+	text-align: center;
+}
+
+.e-shop__comprarCarrito--tyf:hover {
+	font-family: $fuenteA;
+	font-size: $t4 + 0.5;
+	font-weight: $regular;
+	color: $white;
+	text-align: center;
+}
+
 // discografía
 
 .disco__discoTitulo--tyf {

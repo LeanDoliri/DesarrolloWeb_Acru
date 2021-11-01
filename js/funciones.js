@@ -1,37 +1,20 @@
-// HTML Agregar Prodcutos nuevos al Stock
-
-$('#formAgregarProducto').submit(function (e){
-	e.preventDefault();
-
-	let imgs = 'assets/imgs/tshirt_man.jpg';
-
-	let inputs = formAgregarProducto.children;
-	productos.push(new Producto((productos.length) + 1, inputs[0].value, inputs[1].value, inputs[2].value, 1, imgs));
-
-	$('#stock').empty();
-
-	ProductoHTML(productos);
-});
-
 // HTML Productos en STOCK 
 
 function ProductoHTML (array) {
 	$('#stock').empty();
 	for (const producto of array){
-		$('#stock').append (`<div class="card m-1" style="width: 15rem;">
-								  <img src= ${producto.img} class="card-img-top img-fluid" alt="...">
-								  <div class="card-body">
-								    <h5 class="card-title">${producto.nombre}</h5>
-								    <hr>
-								    <p class="card-text">
-								    	ID: ${producto.id}<br>
+		$('#stock').append (`<div class="card m-3 e-shop__card--background e-shop__card--animacion e-shop__card--border sombraCont" style="width: 25rem;">
+								<img src="${producto.img}" class="card-img-top img-fluid" alt="...">
+								<div class="card-body">
+								    <h5 class="card-title e-shop__cardTitle--tyf sombraTxt">${producto.nombre}</h5>
+								    <p class="card-text e-shop__cardP--tyf sombraTxt">
 								    	Talle: ${producto.talle}<br>
 								    	Precio: $${producto.precio}
 								    </p>
-								    <a id='btnCompra${producto.id}' class="btn btn-primary btnCompra">COMPRAR</a>
-								  </div>
-								</div>`);
-
+								    <a id='btnCompra${producto.id}' class="btn e-shop__comprar--animacion e-shop__cardP--btn">Comprar</a>
+								</div>
+							</div>`);
+								
 		$(`#btnCompra${producto.id}`).click(function (){
 			agregarAlCarrito(producto.id);
 			AlertAgregarAlCarrito()
@@ -41,12 +24,19 @@ function ProductoHTML (array) {
 
 // HTML Agregar al CARRITO
 
-function agregarAlCarrito (id){
+function agregarAlCarrito (id){	
+
 	let repetido = carritoDeCompras.find(productoR => productoR.id == id);
 
 	if (repetido){
 		repetido.cantidad = repetido.cantidad + 1;		
-		$(`#cantidad${repetido.id}`).html (`<p id="cantidad${repetido.id}">Cantidad: ${repetido.cantidad}</p>`);
+		$(`#cantidad${repetido.id}`).html (
+				`<div id="cantidad${repetido.id}">
+					<span class="m-3 p-2 badge btn-warning e-shop__spanCarrito--tyf">Cantidad: ${repetido.cantidad}</span>
+				</div>`
+			);
+
+			// <p id="cantidad${repetido.id}">Cantidad: ${repetido.cantidad}</p>);
 
 		carritoTotal();
 
@@ -56,44 +46,58 @@ function agregarAlCarrito (id){
 	}else{
 		let productoCarrito = productos.find(prod => prod.id == id);
 
-		carritoDeCompras.push(productoCarrito);
+		carritoDeCompras.push(productoCarrito);		
 
-		ActualizarCarritoDropdwn();
+		$('#carrito').prepend(`<div id=prodCarrito${productoCarrito.id} class="d-flex justify-content-between align-items-center">
+											<div>
+												<p class="m-3 e-shop__productoCarrito--tyf">${productoCarrito.nombre}</p>
+											</div>
+											<div class="d-inline-flex align-items-center">
+												<div id="cantidad${productoCarrito.id}">
+													<span class="m-3 p-2 badge btn-warning e-shop__spanCarrito--tyf">Cantidad: ${productoCarrito.cantidad}</span>
+												</div>												
+												<span class="m-3 p-2 badge btn-success e-shop__spanCarrito--tyf">$${productoCarrito.precio}</span>
+												<button id='btnEliminarCarrito${productoCarrito.id}' type="button" class="btn btn-danger m-3">
+													<img src="../assets/images/cesto.png" width="15" alt="">
+												</button>
+											</div>											
+										</div>`);
 
-		$('#carrito').prepend(`<div class="card m-1" style="width: 15rem;" id=prodCarrito${productoCarrito.id}>
-								  <img src= '${productoCarrito.img}' class="card-img-top img-fluid" alt="...">
-								  <div class="card-body">
-								    <h5 class="card-title">${productoCarrito.nombre}</h5>
-								    <hr>
-								    <p class="card-text">								    	
-								    	Talle: ${productoCarrito.talle}<br>
-								    	Precio: $${productoCarrito.precio}
-								    	<p id="cantidad${productoCarrito.id}">Cantidad: ${productoCarrito.cantidad}</p>	
-								    </p>								    
-								  </div>
-								  <a id='btnEliminarCarrito${productoCarrito.id}' class="btn btn-primary">Eliminar</a>
-								</div>`);
+								// `<div class="card m-1" style="width: 15rem;" id=prodCarrito${productoCarrito.id}>
+								// 					  <img src= '${productoCarrito.img}' class="card-img-top img-fluid" alt="...">
+								// 					  <div class="card-body">
+								// 					    <h5 class="card-title">${productoCarrito.nombre}</h5>
+								// 					    <hr>
+								// 					    <p class="card-text">								    	
+								// 					    	Talle: ${productoCarrito.talle}<br>
+								// 					    	Precio: $${productoCarrito.precio}
+								// 					    	<p id="cantidad${productoCarrito.id}">Cantidad: ${productoCarrito.cantidad}</p>	
+								// 					    </p>								    
+								// 					  </div>
+								// 					  <a id='btnEliminarCarrito${productoCarrito.id}' class="btn btn-primary">Eliminar</a>
+								// 					</div>`);
 
 		carritoTotal();
 
+		ActualizarCarrito();
+
 		$(`#btnEliminarCarrito${productoCarrito.id}`).click(function (){
-			AlertEliminarDelCarrito()
+			AlertEliminarDelCarrito()			
 
 			let repetido = carritoDeCompras.find(productoR => productoR.id == id);
-			repetido.cantidad = 1;		
-
-			$(`#prodCarrito${productoCarrito.id}`).slideUp(1000);
+			repetido.cantidad = 1;			
 
 			carritoDeCompras = carritoDeCompras.filter(el => el.id != productoCarrito.id);
 
 			carritoTotal();
 
-			ActualizarCarritoDropdwn();
+			ActualizarCarrito();			
 
 			localStorage.setItem('carrito', JSON.stringify(carritoDeCompras));
 		});
 	}
 
+	$('#cantidadCarritoDropdown').html(carritoDeCompras.length);
 	localStorage.setItem('carrito', JSON.stringify(carritoDeCompras));
 }
 
@@ -118,14 +122,26 @@ function carritoTotal () {
 
 // Actualizar Carrito Dropdown
 
-function ActualizarCarritoDropdwn (){
-	$('#cantidadCarritoDropdown').html(carritoDeCompras.length);
+function ActualizarCarrito (){
+	$('#cantidadCarrito').html(carritoDeCompras.length);
 
-	$('#prodsCarritoDropdown').empty();
+	$('#carrito').empty();
 
 	for (const producto of carritoDeCompras){
-		$('#prodsCarritoDropdown').prepend(`<p class='ml-1'><strong>${producto.nombre}</strong> - $${producto.precio}</p>`)
-	}
+				$('#carrito').prepend(`<div id=prodCarrito${producto.id} class="d-flex justify-content-between align-items-center">
+											<div>
+												<p class="m-3 e-shop__productoCarrito--tyf">${producto.nombre}</p>
+											</div>
+											<div class="d-inline-flex align-items-center">
+												<div id="cantidad${producto.id}">
+													<span class="m-3 p-2 badge btn-warning e-shop__spanCarrito--tyf">Cantidad: ${producto.cantidad}</span>
+												</div>												
+												<span class="m-3 p-2 badge btn-success e-shop__spanCarrito--tyf">$${producto.precio}</span>
+												<button id='btnEliminarCarrito${producto.id}' type="button" class="btn btn-danger m-3">
+													<img src="../assets/images/cesto.png" width="15" alt="">
+												</button>
+											</div>											
+										</div>`)}
 }
 
 // Alert Agregar al Carrito
@@ -170,6 +186,6 @@ function FinalizarCompra(){
 	$('#carrito').empty();
 	$('#prodsCarritoDropdown').empty();
 	carritoTotal();
-	ActualizarCarritoDropdwn();
+	// ActualizarCarritoDropdwn();
 }
 

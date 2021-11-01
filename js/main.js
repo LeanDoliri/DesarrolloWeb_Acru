@@ -1,8 +1,8 @@
-	$.get("data/productos.json", function(respuesta, estado){
-		for (const objeto of respuesta){
-			productos.push(new Producto(objeto.id, objeto.nombre, objeto.talle, objeto.precio, objeto.cantidad, objeto.img));
-		}		
-	});
+$.get("../data/productos.json", function(respuesta, estado){
+	for (const objeto of respuesta){
+		productos.push(new Producto(objeto.id, objeto.nombre, objeto.talle, objeto.precio, objeto.cantidad, objeto.img));
+	}		
+});
 
 $(document).ready(function (){
 	ProductoHTML(productos);	

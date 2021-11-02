@@ -34,9 +34,7 @@ function agregarAlCarrito (id){
 				`<div id="cantidad${repetido.id}">
 					<span class="m-3 p-2 badge btn-warning e-shop__spanCarrito--tyf">Cantidad: ${repetido.cantidad}</span>
 				</div>`
-			);
-
-			// <p id="cantidad${repetido.id}">Cantidad: ${repetido.cantidad}</p>);
+			);			
 
 		carritoTotal();
 
@@ -49,55 +47,41 @@ function agregarAlCarrito (id){
 		carritoDeCompras.push(productoCarrito);		
 
 		$('#carrito').prepend(`<div id=prodCarrito${productoCarrito.id} class="d-flex justify-content-between align-items-center">
-											<div>
-												<p class="m-3 e-shop__productoCarrito--tyf">${productoCarrito.nombre}</p>
-											</div>
-											<div class="d-inline-flex align-items-center">
-												<div id="cantidad${productoCarrito.id}">
-													<span class="m-3 p-2 badge btn-warning e-shop__spanCarrito--tyf">Cantidad: ${productoCarrito.cantidad}</span>
-												</div>												
-												<span class="m-3 p-2 badge btn-success e-shop__spanCarrito--tyf">$${productoCarrito.precio}</span>
-												<button id='btnEliminarCarrito${productoCarrito.id}' type="button" class="btn btn-danger m-3">
-													<img src="../assets/images/cesto.png" width="15" alt="">
-												</button>
-											</div>											
-										</div>`);
-
-								// `<div class="card m-1" style="width: 15rem;" id=prodCarrito${productoCarrito.id}>
-								// 					  <img src= '${productoCarrito.img}' class="card-img-top img-fluid" alt="...">
-								// 					  <div class="card-body">
-								// 					    <h5 class="card-title">${productoCarrito.nombre}</h5>
-								// 					    <hr>
-								// 					    <p class="card-text">								    	
-								// 					    	Talle: ${productoCarrito.talle}<br>
-								// 					    	Precio: $${productoCarrito.precio}
-								// 					    	<p id="cantidad${productoCarrito.id}">Cantidad: ${productoCarrito.cantidad}</p>	
-								// 					    </p>								    
-								// 					  </div>
-								// 					  <a id='btnEliminarCarrito${productoCarrito.id}' class="btn btn-primary">Eliminar</a>
-								// 					</div>`);
+									<div>
+										<p class="m-3 e-shop__productoCarrito--tyf">${productoCarrito.nombre}</p>
+									</div>
+									<div class="d-inline-flex align-items-center">
+										<div id="cantidad${productoCarrito.id}">
+											<span class="m-3 p-2 badge btn-warning e-shop__spanCarrito--tyf">Cantidad: ${productoCarrito.cantidad}</span>
+										</div>												
+										<span class="m-3 p-2 badge btn-success e-shop__spanCarrito--tyf">$${productoCarrito.precio}</span>
+											<button id='btnEliminarCarrito${productoCarrito.id}' class="btn btn-danger m-3">
+												<img src="../assets/images/cesto.png" width="15" alt="">
+											</button>
+										</div>											
+									</div>`);
 
 		carritoTotal();
 
 		ActualizarCarrito();
 
-		$(`#btnEliminarCarrito${productoCarrito.id}`).click(function (){
-			AlertEliminarDelCarrito()			
+		$(`#btnEliminarCarrito${productoCarrito.id}`).click(function (e){			
+			// AlertEliminarDelCarrito();
 
-			let repetido = carritoDeCompras.find(productoR => productoR.id == id);
-			repetido.cantidad = 1;			
+			event.preventDefault();
+
+			let repetidoEliminarCarrito = carritoDeCompras.find(productoR => productoR.id == id);
+			repetidoEliminarCarrito.cantidad = 1;			
 
 			carritoDeCompras = carritoDeCompras.filter(el => el.id != productoCarrito.id);
 
-			carritoTotal();
+			// carritoTotal();
 
-			ActualizarCarrito();			
+			ActualizarCarrito();
 
 			localStorage.setItem('carrito', JSON.stringify(carritoDeCompras));
 		});
 	}
-
-	$('#cantidadCarritoDropdown').html(carritoDeCompras.length);
 	localStorage.setItem('carrito', JSON.stringify(carritoDeCompras));
 }
 
@@ -128,20 +112,20 @@ function ActualizarCarrito (){
 	$('#carrito').empty();
 
 	for (const producto of carritoDeCompras){
-				$('#carrito').prepend(`<div id=prodCarrito${producto.id} class="d-flex justify-content-between align-items-center">
-											<div>
-												<p class="m-3 e-shop__productoCarrito--tyf">${producto.nombre}</p>
-											</div>
-											<div class="d-inline-flex align-items-center">
-												<div id="cantidad${producto.id}">
-													<span class="m-3 p-2 badge btn-warning e-shop__spanCarrito--tyf">Cantidad: ${producto.cantidad}</span>
-												</div>												
-												<span class="m-3 p-2 badge btn-success e-shop__spanCarrito--tyf">$${producto.precio}</span>
-												<button id='btnEliminarCarrito${producto.id}' type="button" class="btn btn-danger m-3">
-													<img src="../assets/images/cesto.png" width="15" alt="">
-												</button>
-											</div>											
-										</div>`)}
+			$('#carrito').prepend(`<div id=prodCarrito${producto.id} class="d-flex justify-content-between align-items-center">
+										<div>
+											<p class="m-3 e-shop__productoCarrito--tyf">${producto.nombre}</p>
+										</div>
+										<div class="d-inline-flex align-items-center">
+											<div id="cantidad${producto.id}">
+												<span class="m-3 p-2 badge btn-warning e-shop__spanCarrito--tyf">Cantidad: ${producto.cantidad}</span>
+											</div>												
+											<span class="m-3 p-2 badge btn-success e-shop__spanCarrito--tyf">$${producto.precio}</span>
+											<button id='btnEliminarCarrito${producto.id}' type="button" class="btn btn-danger m-3">
+												<img src="../assets/images/cesto.png" width="15" alt="">
+											</button>
+										</div>											
+									</div>`);}
 }
 
 // Alert Agregar al Carrito

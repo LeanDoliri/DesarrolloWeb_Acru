@@ -1,11 +1,15 @@
-$.get("../data/productos.json", function(respuesta, estado){
-	for (const objeto of respuesta){
-		productos.push(new Producto(objeto.id, objeto.nombre, objeto.talle, objeto.precio, objeto.cantidad, objeto.img));
-	}		
-});
-
-$(document).ready(function (){
-	ProductoHTML(productos);	
+$.get("../data/productos.json", function(datos, estado){
+	console.log(datos);
+	console.log(estado);
+	if (estado == 'success'){
+		for (const objeto of respuesta){
+			productos.push(new Producto(objeto.id, objeto.nombre, objeto.talle, objeto.precio, objeto.cantidad, objeto.img));
+		}
+		console.log(productos)		
+		ProductoHTML(productos);
+	}else{
+		console.log('No se cargaron los datos')
+	}
 });
 
 $(window).on('load', function (){

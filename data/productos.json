@@ -1,5 +1,4 @@
-[ 
-  {"id":1,"nombre":"Kaffir Lime Leaves","talle":"S","precio":37,"cantidad":77,"img":"http://dummyimage.com/242x100.png/5fa2dd/ffffff"},
+[ {"id":1,"nombre":"Kaffir Lime Leaves","talle":"S","precio":37,"cantidad":77,"img":"http://dummyimage.com/242x100.png/5fa2dd/ffffff"},
   {"id":2,"nombre":"Cheese - Grana Padano","talle":"S","precio":90,"cantidad":10,"img":"http://dummyimage.com/130x100.png/cc0000/ffffff"},
   {"id":3,"nombre":"Nut - Hazelnut, Whole","talle":"S","precio":75,"cantidad":4,"img":"http://dummyimage.com/168x100.png/dddddd/000000"},
   {"id":4,"nombre":"Ginger - Crystalized","talle":"M","precio":75,"cantidad":81,"img":"http://dummyimage.com/156x100.png/5fa2dd/ffffff"},
@@ -28,102 +27,103 @@
   {"id":27,"nombre":"Wine - Rubyport","talle":"L","precio":32,"cantidad":20,"img":"http://dummyimage.com/108x100.png/dddddd/000000"},
   {"id":28,"nombre":"Pur Value","talle":"M","precio":3,"cantidad":26,"img":"http://dummyimage.com/120x100.png/ff4444/ffffff"},
   {"id":29,"nombre":"Capers - Ox Eye Daisy","talle":"XL","precio":26,"cantidad":19,"img":"http://dummyimage.com/219x100.png/dddddd/000000"},
-  {"id":30,"nombre":"Cake Circle, Foil, Scallop","talle":"XL","precio":32,"cantidad":18,"img":"http://dummyimage.com/182x100.png/ff4444/ffffff"}
+  {"id":30,"nombre":"Cake Circle, Foil, Scallop","talle":"XL","precio":32,"cantidad":18,"img":"http://dummyimage.com/182x100.png/ff4444/ffffff"}]
 
-  {
-    "id": 1,
-    "nombre": "REMERA A",
-    "talle": "S",
-    "precio": 1200,
-    "cantidad": 1,
-    "img": "../assets/images/productos/tshirt_man.jpg"
-  },
-  {
-    "id": 2,
-    "nombre": "REMERA B",
-    "talle": "M",
-    "precio": 1200,
-    "cantidad": 1,
-    "img": "../assets/images/productos/tshirt_man.jpg"
-  },
-  {
-    "id": 3,
-    "nombre": "REMERA C",
-    "talle": "L",
-    "precio": 1200,
-    "cantidad": 1,
-    "img": "../assets/images/productos/tshirt_man.jpg"
-  },
-  {
-    "id": 4,
-    "nombre": "REMERA D",
-    "talle": "XL",
-    "precio": 1200,
-    "cantidad": 1,
-    "img": "../assets/images/productos/tshirt_man.jpg"
-  },
-  {
-    "id": 5,
-    "nombre": "BUZO A",
-    "talle": "S",
-    "precio": 1500,
-    "cantidad": 1,
-    "img": "../assets/images/productos/tshirt_man.jpg"
-  },
-  {
-    "id": 6,
-    "nombre": "BUZO B",
-    "talle": "M",
-    "precio": 1500,
-    "cantidad": 1,
-    "img": "../assets/images/productos/tshirt_man.jpg"
-  },
-  {
-    "id": 7,
-    "nombre": "BUZO C",
-    "talle": "L",
-    "precio": 1500,
-    "cantidad": 1,
-    "img": "../assets/images/productos/tshirt_man.jpg"
-  },
-  {
-    "id": 8,
-    "nombre": "BUZO D",
-    "talle": "XL",
-    "precio": 1500,
-    "cantidad": 1,
-    "img": "../assets/images/productos/tshirt_man.jpg"
-  },
-  {
-    "id": 9,
-    "nombre": "PANTALÓN A",
-    "talle": "S",
-    "precio": 1300,
-    "cantidad": 1,
-    "img": "../assets/images/productos/tshirt_man.jpg"
-  },
-  {
-    "id": 10,
-    "nombre": "PANTALÓN B",
-    "talle": "M",
-    "precio": 1300,
-    "cantidad": 1,
-    "img": "../assets/images/productos/tshirt_man.jpg"
-  },
-  {
-    "id": 11,
-    "nombre": "PANTALÓN C",
-    "talle": "L",
-    "precio": 1300,
-    "cantidad": 1,
-    "img": "../assets/images/productos/tshirt_man.jpg"
-  },
-  {
-    "id": 12,
-    "nombre": "PANTALÓN D",
-    "talle": "XL",
-    "precio": 1300,
-    "cantidad": 1,
-    "img": "../assets/images/productos/tshirt_man.jpg"
-  }
-]
+// [
+  // {
+  //   "id": 1,
+  //   "nombre": "REMERA A",
+  //   "talle": "S",
+  //   "precio": 1200,
+  //   "cantidad": 1,
+  //   "img": "../assets/images/productos/tshirt_man.jpg"
+  // },
+  // {
+  //   "id": 2,
+  //   "nombre": "REMERA B",
+  //   "talle": "M",
+  //   "precio": 1200,
+  //   "cantidad": 1,
+  //   "img": "../assets/images/productos/tshirt_man.jpg"
+  // },
+  // {
+  //   "id": 3,
+  //   "nombre": "REMERA C",
+  //   "talle": "L",
+  //   "precio": 1200,
+  //   "cantidad": 1,
+  //   "img": "../assets/images/productos/tshirt_man.jpg"
+  // },
+  // {
+  //   "id": 4,
+  //   "nombre": "REMERA D",
+  //   "talle": "XL",
+  //   "precio": 1200,
+  //   "cantidad": 1,
+  //   "img": "../assets/images/productos/tshirt_man.jpg"
+  // },
+  // {
+  //   "id": 5,
+  //   "nombre": "BUZO A",
+  //   "talle": "S",
+  //   "precio": 1500,
+  //   "cantidad": 1,
+  //   "img": "../assets/images/productos/tshirt_man.jpg"
+  // },
+  // {
+  //   "id": 6,
+  //   "nombre": "BUZO B",
+  //   "talle": "M",
+  //   "precio": 1500,
+  //   "cantidad": 1,
+  //   "img": "../assets/images/productos/tshirt_man.jpg"
+  // },
+  // {
+  //   "id": 7,
+  //   "nombre": "BUZO C",
+  //   "talle": "L",
+  //   "precio": 1500,
+  //   "cantidad": 1,
+  //   "img": "../assets/images/productos/tshirt_man.jpg"
+  // },
+  // {
+  //   "id": 8,
+  //   "nombre": "BUZO D",
+  //   "talle": "XL",
+  //   "precio": 1500,
+  //   "cantidad": 1,
+  //   "img": "../assets/images/productos/tshirt_man.jpg"
+  // },
+  // {
+  //   "id": 9,
+  //   "nombre": "PANTALÓN A",
+  //   "talle": "S",
+  //   "precio": 1300,
+  //   "cantidad": 1,
+  //   "img": "../assets/images/productos/tshirt_man.jpg"
+  // },
+  // {
+  //   "id": 10,
+  //   "nombre": "PANTALÓN B",
+  //   "talle": "M",
+  //   "precio": 1300,
+  //   "cantidad": 1,
+  //   "img": "../assets/images/productos/tshirt_man.jpg"
+  // },
+  // {
+  //   "id": 11,
+  //   "nombre": "PANTALÓN C",
+  //   "talle": "L",
+  //   "precio": 1300,
+  //   "cantidad": 1,
+  //   "img": "../assets/images/productos/tshirt_man.jpg"
+  // },
+  // {
+  //   "id": 12,
+  //   "nombre": "PANTALÓN D",
+  //   "talle": "XL",
+  //   "precio": 1300,
+  //   "cantidad": 1,
+  //   "img": "../assets/images/productos/tshirt_man.jpg"
+  // }
+// ]

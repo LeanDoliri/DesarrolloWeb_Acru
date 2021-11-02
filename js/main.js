@@ -1,25 +1,24 @@
 $.get("../data/productos.json", function(datos, estado){
-	console.log(datos);
-	console.log(estado);
-	if (estado == 'success'){
-		for (const objeto of respuesta){
-			productos.push(new Producto(objeto.id, objeto.nombre, objeto.talle, objeto.precio, objeto.cantidad, objeto.img));
-		}
-		console.log(productos)		
-		ProductoHTML(productos);
-	}else{
-		console.log('No se cargaron los datos')
-	}
+	for (const objeto of datos){
+		productos.push(new Producto(objeto.id, objeto.nombre, objeto.talle, objeto.precio, objeto.cantidad, objeto.img));
+	}	
+	ProductoHTML(productos);
+});
+
+$(document).ready(function () {
+    if('carrito' in localStorage){
+        const datos= JSON.parse(localStorage.getItem('carrito'));
+        for (const literal of datos) {
+            carritoDeCompras.push(new Producto(literal.id, literal.nombre, literal.talle, literal.precio, literal.cantidad, literal.img));
+        }
+        carritoUI(carritoDeCompras);
+        carritoTotal(carritoDeCompras);
+    }    
 });
 
 $(window).on('load', function (){
 	$('#espera').remove();
 	$('#stockPadre').fadeIn(1500);
-	RecuperarCarrito ();
 });
-
-CategoriasFiltro(talle,'#filtroTalle');
-
-$('#filtroTalle').change(FiltrarTalle);
 
 $('#finalizarCompra').click(FinalizarCompra);

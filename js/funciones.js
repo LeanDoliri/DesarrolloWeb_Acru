@@ -11,81 +11,78 @@ function ProductoHTML (array) {
 								    	Talle: ${producto.talle}<br>
 								    	Precio: $${producto.precio}
 								    </p>
-								    <a id='btnCompra${producto.id}' class="btn e-shop__comprar--animacion e-shop__cardP--btn">Comprar</a>
+								    <a id='${producto.id}' class="btn e-shop__comprar--animacion e-shop__cardP--btn btnComprarProducto">Comprar</a>
 								</div>
-							</div>`);
-								
-		$(`#btnCompra${producto.id}`).click(function (){
-			agregarAlCarrito(producto.id);
-			AlertAgregarAlCarrito()
-		});
+							</div>`);								
 	}
+	$(`.btnComprarProducto`).click(agregarAlCarrito);
 }
 
-// HTML Agregar al CARRITO
+// Agregar al CARRITO
 
-function agregarAlCarrito (id){	
+function agregarAlCarrito(event){
+	event.preventDefault();
 
-	let repetido = carritoDeCompras.find(productoR => productoR.id == id);
+	const idProducto = event.target.id;
 
-	if (repetido){
-		repetido.cantidad = repetido.cantidad + 1;		
-		$(`#cantidad${repetido.id}`).html (
-				`<div id="cantidad${repetido.id}">
-					<span class="m-3 p-2 badge btn-warning e-shop__spanCarrito--tyf">Cantidad: ${repetido.cantidad}</span>
-				</div>`
-			);			
+	const seleccionado = carritoDeCompras.find(p => p.id == idProducto);
 
-		carritoTotal();
-
-		let productoCarrito = productos.find(prod => prod.id == id);
-		carritoDeCompras.push(productoCarrito);
-
+	if (seleccionado == undefined){
+		carritoDeCompras.push(productos.find(p => p.id == idProducto));
 	}else{
-		let productoCarrito = productos.find(prod => prod.id == id);
+		seleccionado.agregarCantidad(1);
 
-		carritoDeCompras.push(productoCarrito);		
-
-		$('#carrito').prepend(`<div id=prodCarrito${productoCarrito.id} class="d-flex justify-content-between align-items-center">
-									<div>
-										<p class="m-3 e-shop__productoCarrito--tyf">${productoCarrito.nombre}</p>
-									</div>
-									<div class="d-inline-flex align-items-center">
-										<div id="cantidad${productoCarrito.id}">
-											<span class="m-3 p-2 badge btn-warning e-shop__spanCarrito--tyf">Cantidad: ${productoCarrito.cantidad}</span>
-										</div>												
-										<span class="m-3 p-2 badge btn-success e-shop__spanCarrito--tyf">$${productoCarrito.precio}</span>
-											<button id='btnEliminarCarrito${productoCarrito.id}' class="btn btn-danger m-3">
-												<img src="../assets/images/cesto.png" width="15" alt="">
-											</button>
-										</div>											
-									</div>`);
-
-		carritoTotal();
-
-		ActualizarCarrito();
-
-		$(`#btnEliminarCarrito${productoCarrito.id}`).click(function (e){			
-			// AlertEliminarDelCarrito();
-
-			event.preventDefault();
-
-			let repetidoEliminarCarrito = carritoDeCompras.find(productoR => productoR.id == id);
-			repetidoEliminarCarrito.cantidad = 1;			
-
-			carritoDeCompras = carritoDeCompras.filter(el => el.id != productoCarrito.id);
-
-			// carritoTotal();
-
-			ActualizarCarrito();
-
-			localStorage.setItem('carrito', JSON.stringify(carritoDeCompras));
-		});
+		carritoTotal(carritoDeCompras);
 	}
+
+	carritoUI(carritoDeCompras);
+
+	carritoTotal(carritoDeCompras);
+
 	localStorage.setItem('carrito', JSON.stringify(carritoDeCompras));
 }
 
-// Recuperar Carrito
+// HTML Carrito
+
+function carritoUI(productos){
+	$('#cantidadCarrito').html(carritoDeCompras.length);
+
+	$('#carrito').empty();
+
+	for (const producto of productos){
+		$('#carrito').prepend(registroProductoCarrito(producto));
+	}
+
+	$('.btnElimarProducto').click(eliminarProductoCarrito);
+}
+
+function registroProductoCarrito(producto){
+	return `<div class="d-flex justify-content-between align-items-center">
+				<div class="m-3">
+					<p class="e-shop__productoCarrito--tyf">${producto.nombre}</p>
+				</div>
+			<div class="d-inline-flex align-items-center">				
+				<span class="m-3 p-2 badge btn-warning e-shop__spanCarrito--tyf">Cantidad: ${producto.cantidad}</span>											
+				<span class="m-3 p-2 badge btn-success e-shop__spanCarrito--tyf">$${producto.subtotal()}</span>
+				<button id="${producto.id}" class="btn btn-danger m-3 btnElimarProducto">
+					<img src="../assets/images/cesto.png" width="15" class="m-0 p-0">
+				</button>										
+			</div>`
+}
+
+// Eliminar Producto del Carrito
+function eliminarProductoCarrito(event){
+	event.preventDefault();
+	event.stopPropagation();
+
+	carritoDeCompras = carritoDeCompras.filter(producto => producto.id != event.target.id);
+
+	carritoUI(carritoDeCompras);
+
+	carritoTotal(carritoDeCompras);
+
+	localStorage.setItem('carrito', JSON.stringify(carritoDeCompras));
+}
 
 function RecuperarCarrito (){
 	let carritoRecuperado = JSON.parse(localStorage.getItem('carrito'));
@@ -98,34 +95,14 @@ function RecuperarCarrito (){
 
 // Precio total CARRITO
 
-function carritoTotal () {
-	let precioTotal = carritoDeCompras.reduce((acc, el)=> acc + (el.precio * el.cantidad), 0);
+function carritoTotal (productos) {
+	let precioTotal = 0;
 
-	$('#precioTotal').html(precioTotal);	
-}
+	for (const producto of productos){
+		precioTotal = parseFloat(precioTotal + producto.subtotal());
+	}
 
-// Actualizar Carrito Dropdown
-
-function ActualizarCarrito (){
-	$('#cantidadCarrito').html(carritoDeCompras.length);
-
-	$('#carrito').empty();
-
-	for (const producto of carritoDeCompras){
-			$('#carrito').prepend(`<div id=prodCarrito${producto.id} class="d-flex justify-content-between align-items-center">
-										<div>
-											<p class="m-3 e-shop__productoCarrito--tyf">${producto.nombre}</p>
-										</div>
-										<div class="d-inline-flex align-items-center">
-											<div id="cantidad${producto.id}">
-												<span class="m-3 p-2 badge btn-warning e-shop__spanCarrito--tyf">Cantidad: ${producto.cantidad}</span>
-											</div>												
-											<span class="m-3 p-2 badge btn-success e-shop__spanCarrito--tyf">$${producto.precio}</span>
-											<button id='btnEliminarCarrito${producto.id}' type="button" class="btn btn-danger m-3">
-												<img src="../assets/images/cesto.png" width="15" alt="">
-											</button>
-										</div>											
-									</div>`);}
+	$('#precioTotal').html(`Total: $${precioTotal}`);	
 }
 
 // Alert Agregar al Carrito
@@ -140,36 +117,13 @@ function AlertEliminarDelCarrito(){
 	$('#alertProductoEliminado').slideDown('slow').delay(1000).slideUp();
 }
 
-// Filtro
-
-function CategoriasFiltro (lista, selector){
-	$(selector).empty();
-	for (const talle of lista){
-		$(selector).append(`<option>${talle}</option>`);
-	}
-	$(selector).prepend(`<option selected>Todos</option>`);
-}
-
-function FiltrarTalle (){
-	let valor = this.value;
-
-	$('#stock').fadeOut('fast', function(){ 
-		if(valor != "Todos"){
-			let filtrados = productos.filter(producto => producto.talle == valor);
-			ProductoHTML(filtrados);
-		}else {
-			ProductoHTML(productos);
-		}
-	}).fadeIn('fast');
-}
-
 // Finalizar Compra
 function FinalizarCompra(){
 	$.post('https://jsonplaceholder.typicode.com/posts',JSON.stringify(carritoDeCompras));
 	carritoDeCompras = [];
 	$('#carrito').empty();
 	$('#prodsCarritoDropdown').empty();
-	carritoTotal();
-	// ActualizarCarritoDropdwn();
+	carritoUI(carritoDeCompras);
+	carritoTotal(carritoDeCompras);
 }
 

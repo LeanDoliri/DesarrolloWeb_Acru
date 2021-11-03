@@ -17,8 +17,8 @@ $(document).ready(function () {
 });
 
 $(window).on('load', function (){
-	$('#espera').remove();
-	$('#stockPadre').fadeIn(1500);
+	$('#espera').delay(1000).fadeOut();
+	$('#stockPadre').delay(1000).fadeIn(1500);
 });
 
 $('#finalizarCompra').click(FinalizarCompra);

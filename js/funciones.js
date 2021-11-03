@@ -39,13 +39,21 @@ function agregarAlCarrito(event){
 
 	carritoTotal(carritoDeCompras);
 
+	AlertAgregarAlCarrito();
+
 	localStorage.setItem('carrito', JSON.stringify(carritoDeCompras));
 }
 
 // HTML Carrito
 
 function carritoUI(productos){
-	$('#cantidadCarrito').html(carritoDeCompras.length);
+	let cantidadCarrito = 0;
+
+	for (const producto of carritoDeCompras){
+		cantidadCarrito = parseFloat(cantidadCarrito + producto.cantidad);
+	}
+
+	$('#cantidadCarrito').html(cantidadCarrito);
 
 	$('#carrito').empty();
 
@@ -75,11 +83,16 @@ function eliminarProductoCarrito(event){
 	event.preventDefault();
 	event.stopPropagation();
 
+	let repetido = carritoDeCompras.find(productoR => productoR.id == event.target.id);
+	repetido.cantidad = 1;
+
 	carritoDeCompras = carritoDeCompras.filter(producto => producto.id != event.target.id);
 
 	carritoUI(carritoDeCompras);
 
 	carritoTotal(carritoDeCompras);
+
+	AlertEliminarDelCarrito();
 
 	localStorage.setItem('carrito', JSON.stringify(carritoDeCompras));
 }
@@ -108,22 +121,51 @@ function carritoTotal (productos) {
 // Alert Agregar al Carrito
 
 function AlertAgregarAlCarrito(){
-	$('#alertProductoAgregado').slideDown('slow').delay(1000).slideUp();
+	Toastify({
+		text: `Producto agregado al Carrito`,
+		className: "info",
+		position: "center",
+		style: {
+	    background: "#0099cc",
+	    color: "white",
+	    fontFamily: "Lexend",
+	    fontSize: "2rem",
+	    fontWeight: "400",
+	    boxShadow: "1px 1px 10px black",
+		}
+	}).showToast();
 }
 
 // Alert Eliminar del Carrito
 
 function AlertEliminarDelCarrito(){
-	$('#alertProductoEliminado').slideDown('slow').delay(1000).slideUp();
+	Toastify({
+		text: `Producto eliminado`,
+		className: "info",
+		position: "center",
+		style: {
+	    background: "#660033",
+	    color: "white",
+	    fontFamily: "Lexend",
+	    fontSize: "2rem",
+	    fontWeight: "400",
+	    boxShadow: "1px 1px 10px black",
+		}
+	}).showToast();
 }
 
 // Finalizar Compra
 function FinalizarCompra(){
 	$.post('https://jsonplaceholder.typicode.com/posts',JSON.stringify(carritoDeCompras));
+
 	carritoDeCompras = [];
-	$('#carrito').empty();
+
+	$('#carrito').empty();	
 	$('#prodsCarritoDropdown').empty();
+
 	carritoUI(carritoDeCompras);
 	carritoTotal(carritoDeCompras);
+
+	localStorage.setItem('carrito', JSON.stringify(carritoDeCompras));
 }
 

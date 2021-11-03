@@ -15,6 +15,9 @@
 	<!-- AOS CSS -->
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+	<!-- Toastify CSS -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
 	<!-- Font Lexend-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -98,8 +101,15 @@
 	<!-- stock -->
 	<div class="container mt-5 mb-5" data-aos="fade-up">
 		<div class="row">
-			<div id="stock" class="col-lg-12 col-xs-12 p-3 d-flex justify-content-around flex-wrap e-shop__background rounded">
-				
+			<div class="col-lg-12 col-xs-12 p-3 d-flex justify-content-around flex-wrap e-shop__background rounded">								
+				<div class="spinner-border m-3" role="status" id="espera" style="width: 5rem; height: 5rem;">
+					<span class="sr-only">Loading...</span>
+				</div>
+				<div style="display: none" id="stockPadre">
+					<div id="stock" class="d-flex justify-content-around flex-wrap">
+						
+					</div>					
+				</div>
 			</div>
 		</div>
 	</div>
@@ -139,6 +149,9 @@
 	<!-- AOS JS -->
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script>AOS.init();</script>
+
+	<!-- Toastify JS -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 	<script src="../js/funciones.js"></script>
 	<script src="../js/globales.js"></script>

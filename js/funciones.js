@@ -168,4 +168,3 @@ function FinalizarCompra(){
 
 	localStorage.setItem('carrito', JSON.stringify(carritoDeCompras));
 }
-
